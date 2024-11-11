@@ -3,25 +3,62 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { MessageCircle, CheckCircle2, Clock, Headphones, ChevronRight } from 'lucide-react';
 
+const isMobile = () => {
+  if (typeof window === 'undefined') return false;
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
 export default function WhatsAppButton({ message }) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showBenefits, setShowBenefits] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [lastInteractionTime, setLastInteractionTime] = useState(Date.now());
   
   const hoverTimeoutRef = useRef(null);
   const minDisplayTimeoutRef = useRef(null);
   const cooldownTimeoutRef = useRef(null);
+  const inactivityTimeoutRef = useRef(null);
+
+  const handleUserInteraction = useCallback(() => {
+    setLastInteractionTime(Date.now());
+    if (isMobile()) {
+      setShowBenefits(false);
+      if (inactivityTimeoutRef.current) {
+        clearTimeout(inactivityTimeoutRef.current);
+      }
+      inactivityTimeoutRef.current = setTimeout(() => {
+        if (!hasInteracted && !cooldownTimeoutRef.current) {
+          setShowBenefits(true);
+        }
+      }, 500); // Show after 0.5s of inactivity on mobile
+    }
+  }, [hasInteracted]);
 
   useEffect(() => {
+    if (isMobile()) {
+      window.addEventListener('touchstart', handleUserInteraction);
+      window.addEventListener('touchmove', handleUserInteraction);
+    }
+    
     const handleScroll = () => {
+      handleUserInteraction();
       const currentScrollY = window.scrollY;
       setIsVisible(currentScrollY < lastScrollY || currentScrollY < 100);
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (isMobile()) {
+        window.removeEventListener('touchstart', handleUserInteraction);
+        window.removeEventListener('touchmove', handleUserInteraction);
+      }
+      if (inactivityTimeoutRef.current) {
+        clearTimeout(inactivityTimeoutRef.current);
+      }
+    };
   }, [lastScrollY]);
 
   return (
@@ -30,7 +67,7 @@ export default function WhatsAppButton({ message }) {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}
       onMouseEnter={() => {
-        if (cooldownTimeoutRef.current) return;
+        if (isMobile() || cooldownTimeoutRef.current) return;
         
         hoverTimeoutRef.current = setTimeout(() => {
           setShowBenefits(true);
