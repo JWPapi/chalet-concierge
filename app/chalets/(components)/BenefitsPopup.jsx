@@ -1,4 +1,4 @@
-import {CheckCircle2, Clock, Headphones} from 'lucide-react';
+import {CheckCircle2, Zap , BadgeEuro} from 'lucide-react';
 
 export function BenefitsPopup() {
   return <div className="bg-white rounded-lg shadow-xl p-4 mb-2">
@@ -15,11 +15,11 @@ export function BenefitsPopup() {
         <span>Skip the endless searching</span>
       </li>
       <li className="flex items-center gap-2">
-        <Clock className="w-4 h-4 text-green-500"/>
+        <Zap className="w-4 h-4 text-green-500"/>
         <span>Instant personalized matches</span>
       </li>
       <li className="flex items-center gap-2">
-        <Headphones className="w-4 h-4 text-green-500"/>
+        <BadgeEuro className="w-4 h-4 text-green-500"/>
         <span>Best rates guaranteed</span>
       </li>
     </ul>
