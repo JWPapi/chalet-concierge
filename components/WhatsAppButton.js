@@ -36,7 +36,7 @@ export default function WhatsAppButton({ message }) {
             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
             <div className="w-2 h-2 bg-green-500 rounded-full absolute top-0 animate-ping"></div>
           </div>
-          <span className="text-sm font-semibold text-green-600">Concierge Available</span>
+          <span className="text-sm font-semibold text-green-600">Concierge Online</span>
         </div>
         <ul className="space-y-2 text-sm text-gray-600">
           <li className="flex items-center gap-2">
