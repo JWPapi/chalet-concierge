@@ -13,12 +13,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 [text-shadow:_2px_2px_10px_rgb(0_0_0_/_90%)]">
             Chalets in Courchevel 1850
           </h1>
-          <p className="text-xl md:text-3xl max-w-3xl mx-auto font-light">
+          <p className="text-xl md:text-3xl max-w-3xl mx-auto font-light bg-black/30 p-6 rounded-lg backdrop-blur-sm">
             Skip the search. Message our concierge for your perfect chalet match.
-            <span className="block mt-4 text-green-400">Available 24/7 on WhatsApp</span>
+            <span className="block mt-4 text-green-400 font-medium">Available 24/7 on WhatsApp</span>
           </p>
         </div>
       </div>
