@@ -18,14 +18,14 @@ export default function Hero() {
             Chalets in Courchevel 1850
           </h1>
           <p className="text-xl md:text-2xl max-w-2xl mx-auto font-light bg-black/30 p-6 rounded-lg backdrop-blur-sm">
-            Message our concierge for your perfect chalet match
-            <span className="inline-flex items-center gap-2 mt-4 bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full text-sm font-medium">
-              <Clock className="w-4 h-4" />
+            Skip the search. Message our concierge for your perfect chalet.
+            <div className="flex w-full items-center gap-2 mt-4 bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full text-sm font-medium text-center">
+              <Clock className="w-4 h-4"/>
               Available 24/7
-            </span>
+            </div>
           </p>
+
         </div>
       </div>
-    </div>
-  );
+    </div>);
 }
