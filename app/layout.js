@@ -43,3 +43,20 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+import { Playfair_Display } from 'next/font/google'
+import './globals.css'
+
+const playfair = Playfair_Display({ subsets: ['latin'] })
+
+export const metadata = {
+  title: 'Luxury Ski Chalets',
+  description: 'Premium ski chalets with personal WhatsApp concierge service',
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={playfair.className}>{children}</body>
+    </html>
+  )
+}

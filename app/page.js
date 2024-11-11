@@ -58,11 +58,21 @@ function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
       <WhatsAppButton message="Hello, I'm interested in booking a luxury chalet" />
+      
+      {/* Elegant Header */}
+      <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+            Luxury Chalet Concierge
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light">
+            Curated Collection of Elite Alpine Retreats
+          </p>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Luxury Ski Chalets
-          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover our handpicked collection of luxury chalets in the world's most prestigious ski resorts.
             Our WhatsApp concierge is available 24/7 to help you find your perfect mountain retreat.
