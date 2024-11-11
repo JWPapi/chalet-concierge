@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import { Clock } from 'lucide-react';
+import { Playfair_Display } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'] });
 
 export default function Hero({ title, backgroundImage }) {
   return (
