@@ -12,7 +12,7 @@ export default function Courchevel1850() {
       {/* Hero Section */}
       <div className="relative h-[90vh]">
         <Image
-          src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&q=80"
+          src="https://www.skiinluxury.com/attachments/photos/1170440/5df8d3c4-1f38-4002-97b7-60921fc10e14.jpg"
           alt="Luxury Chalet in Courchevel 1850"
           fill
           priority
@@ -36,7 +36,7 @@ export default function Courchevel1850() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative h-[400px]">
             <Image
-              src="https://images.unsplash.com/photo-1613991917190-e68d404b2f7c?auto=format&fit=crop&q=80"
+              src="https://www.skiinluxury.com/attachments/photos/gallery/63b833cf-4cd0-473f-90c8-73fa0a000f09.jpg"
               alt="Luxury Chalet Interior"
               fill
               className="object-cover rounded-lg"
@@ -44,7 +44,7 @@ export default function Courchevel1850() {
           </div>
           <div className="relative h-[400px]">
             <Image
-              src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80"
+              src="https://www.skiinluxury.com/attachments/photos/gallery/63b833c8-e13c-454b-92d9-73fa0a000f09.jpg"
               alt="Chalet Exterior at Night"
               fill
               className="object-cover rounded-lg"
