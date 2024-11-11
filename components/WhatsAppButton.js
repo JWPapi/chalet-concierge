@@ -11,7 +11,7 @@ const isMobile = () => {
 export default function WhatsAppButton({ message }) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [showBenefits, setShowBenefits] = useState(false);
+  const [showBenefits, setShowBenefits] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
   const [lastInteractionTime, setLastInteractionTime] = useState(Date.now());
   
@@ -28,7 +28,7 @@ export default function WhatsAppButton({ message }) {
         clearTimeout(inactivityTimeoutRef.current);
       }
       inactivityTimeoutRef.current = setTimeout(() => {
-        if (!hasInteracted && !cooldownTimeoutRef.current) {
+        if (!hasInteracted && !cooldownTimeoutRef.current && !showBenefits) {
           setShowBenefits(true);
         }
       }, 500); // Show after 0.5s of inactivity on mobile
