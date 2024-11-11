@@ -1,5 +1,8 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
+import { Shield, Star, Clock } from 'lucide-react';
+import Footer from './chalets/(components)/Footer';
+import WhatsAppButton from './chalets/(components)/WhatsAppButton';
 
 export const metadata = {
   title: 'Luxury Ski Chalets | Personal WhatsApp Concierge',
@@ -34,8 +37,27 @@ function Home() {
     }
   ];
 
+  const features = [
+    {
+      icon: Shield,
+      title: "Verified Properties",
+      description: "Every chalet in our collection is personally inspected and verified for quality"
+    },
+    {
+      icon: Star,
+      title: "Concierge Service",
+      description: "24/7 dedicated concierge to handle all your requests and requirements"
+    },
+    {
+      icon: Clock,
+      title: "Instant Booking",
+      description: "Quick response and seamless booking process via WhatsApp"
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50">
+      <WhatsAppButton message="Hello, I'm interested in booking a luxury chalet" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -74,6 +96,44 @@ function Home() {
           ))}
         </div>
       </div>
+
+      {/* Features Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Why Choose Us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center p-6">
+                <feature.icon className="w-12 h-12 mx-auto text-green-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WhatsApp CTA Section */}
+      <section className="bg-green-600 py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Find Your Perfect Chalet?
+          </h2>
+          <p className="text-xl mb-8">
+            Message our WhatsApp concierge now for instant, personalized recommendations
+            tailored to your preferences.
+          </p>
+          <div className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg 
+                          text-lg font-semibold hover:bg-green-50 transition-colors duration-200">
+            <span>Chat with Us</span>
+            <span className="text-sm">(Response in &lt; 5 min)</span>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </main>
   );
 }
