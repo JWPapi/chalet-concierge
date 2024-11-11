@@ -1,7 +1,7 @@
 import {CheckCircle2, Zap , BadgeEuro} from 'lucide-react';
 
 export function BenefitsPopup() {
-  return <div className="bg-white rounded-lg shadow-xl p-4 mb-2">
+  return <div className="bg-white rounded-lg shadow-xl p-4 mb-2 max-w-xs">
     <div className="flex items-center gap-2 mb-2">
       <div className="relative">
         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
