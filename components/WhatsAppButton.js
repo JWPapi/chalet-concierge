@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { MessageCircle, CheckCircle2, Clock, Headphones, ChevronRight } from 'lucide-react';
+import { MessageCircle, CheckCircle2, Clock, Headphones, ChevronRight, PhoneCall } from 'lucide-react';
+import ScheduleCallPopup from './schedule-call/ScheduleCallPopup';
 
 const isMobile = () => {
   if (typeof window === 'undefined') return false;
@@ -11,6 +12,7 @@ const isMobile = () => {
 export default function WhatsAppButton({ message }) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [showScheduleCall, setShowScheduleCall] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +57,27 @@ export default function WhatsAppButton({ message }) {
           </li>
         </ul>
       </div>
+
+      {/* Schedule Call Popup */}
+      <ScheduleCallPopup 
+        isVisible={showScheduleCall}
+        onClose={() => setShowScheduleCall(false)}
+        onSchedule={(data) => {
+          console.log('Scheduling call:', data);
+          // Here you would typically send this data to your backend
+          setShowScheduleCall(false);
+        }}
+      />
+
+      {/* Schedule Call button */}
+      <button
+        onClick={() => setShowScheduleCall(true)}
+        className="bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 flex items-center gap-3 group"
+      >
+        <PhoneCall className="w-5 h-5" />
+        <span>Schedule Call</span>
+        <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+      </button>
 
       {/* WhatsApp button */}
       <a
