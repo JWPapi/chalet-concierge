@@ -7,8 +7,8 @@ export default function ConciergeSection({ location }) {
         <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-gray-900">
           Our Commitments
         </h2>
-        <div className="space-y-12">
-          <div className="flex items-start gap-8 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex items-start gap-8 p-6 bg-white rounded-xl shadow-sm md:hover:shadow-none hover:shadow-md transition-shadow">
             <Shield className="w-10 h-10 text-gray-900 flex-shrink-0" />
             <div className="flex-1">
               <h3 className="text-xl font-semibold mb-2 text-gray-900">Trusted Excellence</h3>
