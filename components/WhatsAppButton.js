@@ -68,7 +68,7 @@ export default function WhatsAppButton({ message }) {
           </div>
         </div>
         <div className="flex flex-col items-start">
-          <span className="font-semibold text-sm">Talk to us now</span>
+          <span className="font-semibold text-sm">Talk to us on WhatsApp</span>
           <span className="text-xs opacity-90">Online now</span>
         </div>
         <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
