@@ -1,12 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { MessageCircle, CheckCircle2, Clock, Headphones, ChevronRight } from 'lucide-react';
 
 export default function WhatsAppButton({ message }) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showBenefits, setShowBenefits] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  
+  const hoverTimeoutRef = useRef(null);
+  const minDisplayTimeoutRef = useRef(null);
+  const cooldownTimeoutRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,8 +29,28 @@ export default function WhatsAppButton({ message }) {
       className={`fixed bottom-20 right-4 z-40 flex flex-col items-end gap-2 transition-all duration-300 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}
-      onMouseEnter={() => setShowBenefits(true)}
-      onMouseLeave={() => setShowBenefits(false)}
+      onMouseEnter={() => {
+        if (cooldownTimeoutRef.current) return;
+        
+        hoverTimeoutRef.current = setTimeout(() => {
+          setShowBenefits(true);
+          minDisplayTimeoutRef.current = setTimeout(() => {
+            minDisplayTimeoutRef.current = null;
+          }, 2000); // Minimum display time of 2s
+        }, 500); // Show after 0.5s hover
+      }}
+      onMouseLeave={() => {
+        if (hoverTimeoutRef.current) {
+          clearTimeout(hoverTimeoutRef.current);
+          hoverTimeoutRef.current = null;
+        }
+        if (!minDisplayTimeoutRef.current) {
+          setShowBenefits(false);
+          cooldownTimeoutRef.current = setTimeout(() => {
+            cooldownTimeoutRef.current = null;
+          }, 5000); // 5s cooldown before showing again
+        }
+      }}
     >
       {/* Benefits popup */}
       <div className={`bg-white rounded-lg shadow-xl p-4 mb-2 transition-all duration-300 ${
@@ -60,6 +85,10 @@ export default function WhatsAppButton({ message }) {
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white px-6 py-4 rounded-full shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center gap-3 group scale-110"
+        onClick={() => {
+          setHasInteracted(true);
+          setShowBenefits(false);
+        }}
       >
         <div className="relative">
           <MessageCircle className="w-6 h-6" />
