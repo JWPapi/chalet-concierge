@@ -9,7 +9,7 @@ export default function CTASection({ location }) {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className={`${playfair.className} text-4xl md:text-5xl font-bold mb-6`}>
-            Instant Luxury Chalet Booking
+            Instant Luxury Chalet&nbsp;Booking
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Send your dates via WhatsApp, receive tailored recommendations, and secure your perfect chalet in {location} with our concierge support.
