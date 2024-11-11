@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -6,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import useEmblaCarousel from 'embla-carousel-react';
 
 const images = [
   {
@@ -31,6 +33,16 @@ const images = [
 ];
 
 export default function ImageGallery() {
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  useEffect(() => {
+    if (emblaApi) {
+      emblaApi.on('select', () => {
+        setSelectedIndex(emblaApi.selectedScrollSnap());
+      });
+    }
+  }, [emblaApi]);
   return (
     <section className="bg-black">
       <div className="text-center py-16 px-4">
@@ -48,12 +60,13 @@ export default function ImageGallery() {
           align: "start",
           loop: true,
         }}
-        className="w-full"
+        className="w-full relative"
+        ref={emblaRef}
       >
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
-              <div className="relative aspect-[4/5]">
+              <div className="relative aspect-[4/5] after:absolute after:inset-0 after:bg-black/10">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -67,6 +80,23 @@ export default function ImageGallery() {
         </CarouselContent>
         <CarouselPrevious className="hidden md:flex" />
         <CarouselNext className="hidden md:flex" />
+        
+        {/* Dots indicator */}
+        <div className="absolute bottom-4 left-0 right-0">
+          <div className="flex justify-center gap-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === selectedIndex 
+                    ? 'bg-white w-4' 
+                    : 'bg-white/50'
+                }`}
+                onClick={() => emblaApi?.scrollTo(index)}
+              />
+            ))}
+          </div>
+        </div>
       </Carousel>
 
       <div className="text-center py-16 px-4">
