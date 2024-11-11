@@ -13,7 +13,7 @@ export default function Courchevel1850() {
       {/* Hero Section */}
       <div className="relative h-[90vh]">
         <Image
-          src="/images/courchevel-hero.jpg"
+          src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&q=80"
           alt="Luxury Chalet in Courchevel 1850"
           fill
           priority

@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: 'Luxury Alpine Chalets | Premium Ski Destinations',
     description: 'Experience ultimate alpine luxury in Verbier, Zermatt, Gstaad, and Courchevel 1850',
-    images: ['/images/luxury-chalet-hero.jpg'],
+    images: ['https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&q=80'],
   },
 };
 
