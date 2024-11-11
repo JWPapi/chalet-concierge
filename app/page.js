@@ -31,24 +31,6 @@ function Home() {
       name: "Gstaad",
       description: "Timeless Swiss Elegance",
       image: "https://www.skiinluxury.com/attachments/photos/1170440/66eae7ce-ff90-4135-8bba-45770a000004.jpg"
-    },
-    {
-      href: "/chalets/courchevel-1650",
-      name: "Courchevel 1650",
-      description: "Authentic Alpine Charm",
-      image: "https://www.skiinluxury.com/attachments/photos/courchevel-1650/hero-courchevel-1650.jpg"
-    },
-    {
-      href: "/chalets/courchevel-1550",
-      name: "Courchevel 1550",
-      description: "Family-Friendly Luxury",
-      image: "https://www.skiinluxury.com/attachments/photos/courchevel-1550/hero-courchevel-1550.jpg"
-    },
-    {
-      href: "/chalets/courchevel-1300",
-      name: "Courchevel 1300",
-      description: "Traditional Mountain Living",
-      image: "https://www.skiinluxury.com/attachments/photos/courchevel-1300/hero-courchevel-1300.jpg"
     }
   ];
 
