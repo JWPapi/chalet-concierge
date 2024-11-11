@@ -4,11 +4,6 @@ import ConciergeSection from '../(components)/ConciergeSection';
 import CTASection from '../(components)/CTASection';
 import ImageGallery from '../(components)/ImageGallery';
 
-export const metadata = {
-  title: 'Luxury Chalets in Verbier | Personal WhatsApp Concierge',
-  description: 'Skip the endless searching. Message our WhatsApp concierge for instant, personalized luxury chalet recommendations in Verbier. Available 24/7.',
-};
-
 import { metadata } from './metadata';
 
 export { metadata };

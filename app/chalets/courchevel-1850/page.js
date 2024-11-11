@@ -5,11 +5,6 @@ import ConciergeSection from '../(components)/ConciergeSection';
 import CTASection from '../(components)/CTASection';
 import ImageGallery from '../(components)/ImageGallery';
 
-export const metadata = {
-  title: 'Luxury Chalets in Courchevel 1850 | Personal WhatsApp Concierge',
-  description: 'Skip the endless searching. Message our WhatsApp concierge for instant, personalized luxury chalet recommendations in Courchevel 1850. Available 24/7.',
-};
-
 import { metadata } from './metadata';
 
 export { metadata };
