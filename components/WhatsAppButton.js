@@ -59,7 +59,7 @@ export default function WhatsAppButton({ message }) {
         href={`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodeURIComponent(message || 'Hello, I would like to inquire about your luxury chalets.')}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 text-white px-6 py-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center gap-3 group"
+        className="bg-green-500 text-white px-8 py-5 rounded-full shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center gap-4 group scale-110"
       >
         <div className="relative">
           <MessageCircle className="w-6 h-6" />
