@@ -8,27 +8,27 @@ export default function ConciergeSection({ location }) {
           Our Commitments
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-start gap-8 p-6 bg-white rounded-xl shadow-sm md:hover:shadow-none hover:shadow-md transition-shadow">
-            <Shield className="w-10 h-10 text-gray-900 flex-shrink-0" />
-            <div className="flex-1">
+          <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm md:hover:shadow-none hover:shadow-md transition-shadow text-center">
+            <Shield className="w-12 h-12 text-gray-900 mb-4" />
+            <div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900">Trusted Excellence</h3>
               <p className="text-base text-gray-600">
                 15+ years of curating the finest properties in {location}
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-8 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-            <Trophy className="w-10 h-10 text-gray-900 flex-shrink-0" />
-            <div className="flex-1">
+          <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+            <Trophy className="w-12 h-12 text-gray-900 mb-4" />
+            <div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900">Best Value Promise</h3>
               <p className="text-base text-gray-600">
                 Guaranteed competitive rates and exclusive perks for our clients
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-8 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-            <Star className="w-10 h-10 text-gray-900 flex-shrink-0" />
-            <div className="flex-1">
+          <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+            <Star className="w-12 h-12 text-gray-900 mb-4" />
+            <div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900">Personal Touch</h3>
               <p className="text-base text-gray-600">
                 Dedicated team ensuring your perfect stay, from booking to checkout
