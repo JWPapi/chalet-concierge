@@ -1,4 +1,4 @@
-import { Clock, Shield, Trophy, Star } from 'lucide-react';
+import { Bolt, Shield, Trophy, DollarSign } from 'lucide-react';
 import { Playfair_Display } from 'next/font/google';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
@@ -30,7 +30,7 @@ export default function ConciergeSection({ location }) {
             </div>
           </div>
           <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
-            <Star className="w-12 h-12 text-gray-900 mb-4" />
+            <DollarSign className="w-12 h-12 text-gray-900 mb-4" />
             <div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900">Personal Touch</h3>
               <p className="text-base text-gray-600">
