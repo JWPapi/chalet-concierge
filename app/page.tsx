@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Home() {
+function Home() {
   return (
     <main className="max-w-7xl mx-auto p-8">
       <h1 className="text-4xl font-bold mb-8">Welcome to Places</h1>

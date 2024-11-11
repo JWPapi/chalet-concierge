@@ -1,26 +1,8 @@
 import { notFound } from 'next/navigation';
-import type { Place } from '@/types/place';
 
-// This would typically come from an API or database
-const places: Place[] = [
-  {
-    id: 'paris',
-    name: 'Paris',
-    description: 'The City of Light, known for its art, culture, and cuisine.',
-    highlights: ['Eiffel Tower', 'Louvre Museum', 'Notre-Dame Cathedral'],
-    location: {
-      country: 'France',
-      continent: 'Europe',
-      coordinates: {
-        latitude: 48.8566,
-        longitude: 2.3522
-      }
-    }
-  },
-  // Add more places as needed
-];
+import { places } from '@/data/places';
 
-export default function PlacePage({ params }: { params: { id: string } }) {
+export default function PlacePage({ params }) {
   const place = places.find(p => p.id === params.id);
   
   if (!place) {
