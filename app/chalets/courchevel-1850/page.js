@@ -1,8 +1,9 @@
-import Hero from '@/components/shared/Hero';
-import ConciergeSection from '@/components/shared/ConciergeSection';
-import ImageGallery from '@/components/shared/ImageGallery';
-import CTASection from '@/components/shared/CTASection';
-import WhatsAppButton from '../../../components/WhatsAppButton';
+
+import WhatsAppButton from '../(components)/WhatsAppButton';
+import Hero from '../(components)/Hero';
+import ConciergeSection from '../(components)/ConciergeSection';
+import CTASection from '../(components)/CTASection';
+import ImageGallery from '../(components)/ImageGallery';
 
 export const metadata = {
   title: 'Luxury Chalets in Courchevel 1850 | Personal WhatsApp Concierge',

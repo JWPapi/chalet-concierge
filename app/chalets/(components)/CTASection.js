@@ -1,4 +1,4 @@
-import { BenefitsPopup } from '../BenefitsPopup';
+import {BenefitsPopup} from './BenefitsPopup';
 
 export default function CTASection({ location }) {
   return (
