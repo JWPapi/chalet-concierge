@@ -17,15 +17,15 @@ const images = [
     alt: "Chalet Exterior at Night"
   },
   {
-    src: "https://www.skiinluxury.com/attachments/photos/gallery/luxury-chalet-bedroom.jpg",
+    src: "https://www.skiinluxury.com/attachments/photos/gallery/66829a1a-3cb0-4ab6-843e-47140a000004.jpg",
     alt: "Luxury Bedroom Suite"
   },
   {
-    src: "https://www.skiinluxury.com/attachments/photos/gallery/chalet-dining.jpg",
+    src: "https://www.skiinluxury.com/attachments/photos/gallery/63b41e8e-cf30-41d6-9001-36ef0a000f09.jpg",
     alt: "Elegant Dining Area"
   },
   {
-    src: "https://www.skiinluxury.com/attachments/photos/gallery/chalet-spa.jpg",
+    src: "https://www.skiinluxury.com/attachments/photos/gallery/66aa2648-47e0-43b6-a638-4b1e0a000004.jpg",
     alt: "Private Spa Area"
   }
 ];

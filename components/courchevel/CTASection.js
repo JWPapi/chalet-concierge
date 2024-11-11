@@ -9,8 +9,7 @@ export default function CTASection() {
           Send your dates via WhatsApp, receive tailored recommendations, and secure your perfect chalet with our concierge support.
         </p>
         <button
-          onClick={() => {/* TODO: Add benefits popup trigger */}}
-          className="bg-white text-green-700 px-8 py-4 rounded-lg text-lg font-semibold 
+          className="bg-white text-green-700 px-8 py-4 rounded-lg text-lg font-semibold
                      hover:bg-green-50 transition-colors duration-200 shadow-lg"
         >
           Book via WhatsApp

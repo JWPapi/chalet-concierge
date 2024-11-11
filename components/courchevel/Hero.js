@@ -20,7 +20,7 @@ export default function Hero() {
           <p className="text-xl md:text-2xl max-w-2xl mx-auto font-light bg-black/30 p-6 rounded-lg backdrop-blur-sm">
             Skip the search. Message our concierge for your perfect chalet.
             <div className="flex justify-center">
-              <div className="inline-flex items-center gap-2 mt-4 bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 mt-4 bg-green-500/40 text-green-400 px-3 py-1.5 rounded-full text-sm font-medium">
               <Clock className="w-4 h-4"/>
                 Available 24/7
               </div>
