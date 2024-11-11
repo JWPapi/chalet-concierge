@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export default function WhatsAppButton() {
+export default function WhatsAppButton({ message }) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -19,7 +19,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+      href={`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodeURIComponent(props.message || 'Hello, I would like to inquire about your luxury chalets.')}`}
       target="_blank"
       rel="noopener noreferrer"
       className={`fixed bottom-20 right-4 z-40 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 ${
