@@ -9,6 +9,10 @@ export const metadata = {
   description: 'Skip the endless searching. Message our WhatsApp concierge for instant, personalized luxury chalet recommendations in Verbier. Available 24/7.',
 };
 
+import { metadata } from './metadata';
+
+export { metadata };
+
 export default function Verbier() {
   return (
     <main className="relative min-h-screen">
