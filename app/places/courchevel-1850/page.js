@@ -56,7 +56,7 @@ export default function Courchevel1850() {
             Skip the endless searching. Message our WhatsApp concierge your requirements and get instant, personalized matches.
           </p>
           <a
-            href={`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodeURIComponent(message || 'Hello, I would like to inquire about luxury chalets in Courchevel 1850.')}`}
+            href={`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodeURIComponent( 'Hello, I would like to inquire about luxury chalets in Courchevel 1850.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors"
