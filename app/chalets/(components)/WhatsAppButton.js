@@ -10,53 +10,8 @@ const isMobile = () => {
 };
 
 export default function WhatsAppButton({ message }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrollTimeout, setScrollTimeout] = useState(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Clear the existing timeout
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-
-      // Set a new timeout
-      const timeout = setTimeout(() => {
-        setIsVisible(true);
-      }, 500);
-
-      setScrollTimeout(timeout);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-    };
-  }, [scrollTimeout]);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 100);
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]);
-
   return (
-    <div
-        className={`fixed bottom-8 right-4 z-40 flex flex-col items-end gap-2 transition-all duration-300 ${isVisible
-            ? 'translate-y-0 opacity-100'
-            : 'translate-y-20 opacity-0'}`}
+    <div className="fixed bottom-8 right-4 z-40 flex flex-col items-end gap-2"
     >
       {/* Benefits popup */}
       <BenefitsPopup/>
