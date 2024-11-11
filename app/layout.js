@@ -1,8 +1,9 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
+const playfair = Playfair_Display({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Luxury Alpine Chalets | Premium Ski Destinations in Switzerland & France',
