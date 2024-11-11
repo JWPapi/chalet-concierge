@@ -38,7 +38,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className={playfair.className}>
         {children}
-        <CookieConsent />
       </body>
     </html>
   );
