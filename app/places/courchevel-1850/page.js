@@ -2,8 +2,8 @@ import Image from 'next/image';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata = {
-  title: 'Luxury Chalets in Courchevel 1850 | Exclusive Alpine Retreats',
-  description: 'Discover ultra-luxury chalets in Courchevel 1850. Private pools, ski-in/ski-out access, and personal concierge. Book your premium winter escape today.',
+  title: 'Luxury Chalets in Courchevel 1850 | Personal WhatsApp Concierge',
+  description: 'Skip the endless searching. Message our WhatsApp concierge for instant, personalized luxury chalet recommendations in Courchevel 1850. Available 24/7.',
 };
 
 export default function Courchevel1850() {
@@ -25,7 +25,7 @@ export default function Courchevel1850() {
               Luxury Chalets in Courchevel 1850
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-              Experience the pinnacle of alpine luxury in the world's most prestigious ski resort
+              Skip the search. Message our concierge for your perfect luxury chalet match.
             </p>
           </div>
         </div>
@@ -53,39 +53,52 @@ export default function Courchevel1850() {
         </div>
       </section>
 
-      {/* Luxury Experience */}
+      {/* WhatsApp Concierge Service */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            The Ultimate Alpine Experience
+            Your Personal Luxury Concierge
           </h2>
-          <p className="text-xl text-gray-600 mb-12">
-            Discover the epitome of luxury in Courchevel 1850. Our exclusive chalets offer direct ski access, 
-            private wellness facilities, and world-class service.
-          </p>
-          <div className="relative h-[500px] rounded-lg overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1595274459742-4a41d35784ee?auto=format&fit=crop&q=80"
-              alt="Luxury Pool"
-              fill
-              className="object-cover"
-            />
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="p-6 rounded-lg bg-gray-50">
+              <h3 className="text-xl font-semibold mb-4">24/7 Availability</h3>
+              <p className="text-gray-600">Direct access to our concierge team anytime, anywhere via WhatsApp</p>
+            </div>
+            <div className="p-6 rounded-lg bg-gray-50">
+              <h3 className="text-xl font-semibold mb-4">Tailored Search</h3>
+              <p className="text-gray-600">Tell us your preferences, we'll find your perfect chalet match</p>
+            </div>
+            <div className="p-6 rounded-lg bg-gray-50">
+              <h3 className="text-xl font-semibold mb-4">Best Rates</h3>
+              <p className="text-gray-600">Access to exclusive deals and special offers through our concierge</p>
+            </div>
           </div>
+          <p className="text-xl text-gray-600 mb-8">
+            Skip the endless searching. Simply message us your requirements and let our expert concierge team handle everything.
+          </p>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+      {/* WhatsApp CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Your Luxury Escape Awaits
+            Book Effortlessly via WhatsApp
           </h2>
-          <p className="text-xl mb-12">
-            Contact our concierge team now for exclusive access and special rates
-          </p>
-          <div className="text-2xl font-light">
-            Starting from €90,000/week
+          <div className="max-w-2xl mx-auto space-y-6 mb-8">
+            <p className="text-xl">
+              1. Message us your dates and preferences
+            </p>
+            <p className="text-xl">
+              2. Receive personalized chalet recommendations
+            </p>
+            <p className="text-xl">
+              3. Secure your booking with our concierge's help
+            </p>
           </div>
+          <p className="text-lg opacity-90">
+            Luxury chalets from €90,000/week • Instant responses • No booking fees
+          </p>
         </div>
       </section>
 
