@@ -1,9 +1,9 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import CookieConsent from '@/components/CookieConsent';
 
-const inter = Inter({ subsets: ['latin'] });
+const playfair = Playfair_Display({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Luxury Alpine Chalets | Premium Ski Destinations in Switzerland & France',
@@ -36,27 +36,10 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body className={playfair.className}>
         {children}
         <CookieConsent />
       </body>
     </html>
   );
-}
-import { Playfair_Display } from 'next/font/google'
-import './globals.css'
-
-const playfair = Playfair_Display({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Luxury Ski Chalets',
-  description: 'Premium ski chalets with personal WhatsApp concierge service',
-}
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={playfair.className}>{children}</body>
-    </html>
-  )
 }
