@@ -1,11 +1,14 @@
 import {BenefitsPopup} from './BenefitsPopup';
+import { Playfair_Display } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'] });
 
 export default function CTASection({ location }) {
   return (
     <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className={`${playfair.className} text-4xl md:text-5xl font-bold mb-6`}>
             Instant Luxury Chalet Booking
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

@@ -1,6 +1,9 @@
 'use client'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { Playfair_Display } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'] });
 import {
   Carousel,
   CarouselContent,
@@ -25,7 +28,7 @@ export default function ImageGallery({ images, location }) {
   return (
     <section className="bg-black">
       <div className="text-center py-16 px-4">
-        <h2 className="text-4xl font-bold mb-4 text-white">Extensive Property Portfolio</h2>
+        <h2 className={`${playfair.className} text-4xl font-bold mb-4 text-white`}>Extensive Property Portfolio</h2>
         <p className="text-lg text-gray-300 max-w-3xl mx-auto">
           We have unparalleled access to {location}'s complete property market. 
           Our extensive network allows us to find the perfect chalet that matches your 
