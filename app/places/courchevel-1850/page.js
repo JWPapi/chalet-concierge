@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { MessageCircle, CheckCircle2, Clock, Headphones } from 'lucide-react';
 
 export const metadata = {
   title: 'Luxury Chalets in Courchevel 1850 | Personal WhatsApp Concierge',
@@ -31,6 +32,41 @@ export default function Courchevel1850() {
         </div>
       </div>
 
+      {/* WhatsApp Concierge Service */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            WhatsApp Concierge Service
+          </h2>
+          <div className="flex justify-center gap-8 mb-8">
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5 text-green-600" />
+              <span>24/7 Available</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-green-600" />
+              <span>Instant Matches</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Headphones className="w-5 h-5 text-green-600" />
+              <span>Best Rates</span>
+            </div>
+          </div>
+          <p className="text-xl text-gray-600 mb-8">
+            Skip the endless searching. Message our WhatsApp concierge your requirements and get instant, personalized matches.
+          </p>
+          <a
+            href={`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodeURIComponent(message || 'Hello, I would like to inquire about luxury chalets in Courchevel 1850.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors"
+          >
+            <MessageCircle className="w-5 h-5" />
+            <span>Message Concierge Now</span>
+          </a>
+        </div>
+      </section>
+
       {/* Image Gallery */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -50,32 +86,6 @@ export default function Courchevel1850() {
               className="object-cover rounded-lg"
             />
           </div>
-        </div>
-      </section>
-
-      {/* WhatsApp Concierge Service */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Your Personal Luxury Concierge
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="p-6 rounded-lg bg-gray-50">
-              <h3 className="text-xl font-semibold mb-4">24/7 Availability</h3>
-              <p className="text-gray-600">Direct access to our concierge team anytime, anywhere via WhatsApp</p>
-            </div>
-            <div className="p-6 rounded-lg bg-gray-50">
-              <h3 className="text-xl font-semibold mb-4">Tailored Search</h3>
-              <p className="text-gray-600">Tell us your preferences, we'll find your perfect chalet match</p>
-            </div>
-            <div className="p-6 rounded-lg bg-gray-50">
-              <h3 className="text-xl font-semibold mb-4">Best Rates</h3>
-              <p className="text-gray-600">Access to exclusive deals and special offers through our concierge</p>
-            </div>
-          </div>
-          <p className="text-xl text-gray-600 mb-8">
-            Skip the endless searching. Simply message us your requirements and let our expert concierge team handle everything.
-          </p>
         </div>
       </section>
 
