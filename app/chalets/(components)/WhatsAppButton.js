@@ -14,7 +14,7 @@ export default function WhatsAppButton({message}) {
 
         {/* WhatsApp button */}
         <a
-            href={`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodeURIComponent(
+            href={`https://wa.me/4407849966208?text=${encodeURIComponent(
                 message || 'Hello, I would like to inquire about your luxury chalets.')}`}
             target="_blank"
             rel="noopener noreferrer"
