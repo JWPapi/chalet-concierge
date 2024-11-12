@@ -14,12 +14,15 @@ export default function CTASection({ location }) {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Send your dates via WhatsApp, receive tailored recommendations, and secure your perfect chalet in {location} with our concierge support.
           </p>
-          <button
-            className="bg-white text-green-700 px-8 py-4 rounded-lg text-lg font-semibold
+          <a
+            href={`https://wa.me/4407849966208?text=Hello, I would like to inquire about your luxury chalets.`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg text-lg font-semibold
                        hover:bg-green-50 transition-colors duration-200 shadow-lg mb-8"
           >
             Book via WhatsApp
-          </button>
+          </a>
           <BenefitsPopup />
 
           <p className="mt-6 text-lg opacity-90">
