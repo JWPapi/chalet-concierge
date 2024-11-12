@@ -26,7 +26,7 @@ export default function CTASection({ location }) {
           <BenefitsPopup />
 
           <p className="mt-6 text-lg opacity-90">
-            From €90,000/week • Instant Response • No Booking Fees
+            From €20,000/week • Instant Response • No Booking Fees
           </p>
         </div>
       </div>
