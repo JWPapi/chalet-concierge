@@ -1,9 +1,10 @@
 import './globals.css';
-import { Inter, Playfair_Display } from 'next/font/google';
+import {Inter, Playfair_Display} from 'next/font/google';
 import Script from 'next/script';
+import {GoogleTagManager} from '@next/third-parties/google';
 
-const inter = Inter({ subsets: ['latin'] });
-const playfair = Playfair_Display({ subsets: ['latin'] });
+const inter = Inter({subsets: ['latin']});
+const playfair = Playfair_Display({subsets: ['latin']});
 
 export const metadata = {
   title: 'Luxury Alpine Chalets | Premium Ski Destinations in Switzerland & France',
@@ -16,29 +17,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <head>
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-          `}
-        </Script>
-      </head>
+export default function RootLayout({children}) {
+  return (<html lang="en">
+      <GoogleTagManager gtmId="AW-16774456845"/>
       <body className={inter.className}>
-        {children}
+      {children}
       </body>
-    </html>
-  );
+      </html>);
 }
