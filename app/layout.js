@@ -2,6 +2,7 @@ import './globals.css';
 import {Inter, Playfair_Display} from 'next/font/google';
 import Script from 'next/script';
 import {GoogleTagManager} from '@next/third-parties/google';
+import {Suspense} from 'react';
 
 const inter = Inter({subsets: ['latin']});
 const playfair = Playfair_Display({subsets: ['latin']});
@@ -19,9 +20,12 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (<html lang="en">
-      <GoogleTagManager gtmId="AW-16774456845"/>
-      <body className={inter.className}>
-      {children}
-      </body>
-      </html>);
+  <GoogleTagManager gtmId="AW-16774456845"/>
+  <body className={inter.className}>
+  <Suspense>
+    {children}
+  </Suspense>
+  </body>
+</html>)
+  ;
 }
