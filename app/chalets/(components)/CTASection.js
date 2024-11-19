@@ -10,7 +10,7 @@ export default function CTASection({ location }) {
   const searchParams = useSearchParams();
   const kwParam = searchParams.get('kw');
   const whatsappMessage = kwParam 
-    ? `Hello, I would like to inquire about your luxury chalets. (Source: ${kwParam})`
+    ? `Hello, I would like to inquire about your luxury chalets. (Search: ${kwParam})`
     : 'Hello, I would like to inquire about your luxury chalets.';
   return (
     <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">

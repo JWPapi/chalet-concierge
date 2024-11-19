@@ -1,9 +1,7 @@
 'use client';
 
-import {useEffect, useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 import {ChevronRight, MessageCircle} from 'lucide-react';
-import {BenefitsPopup} from './BenefitsPopup';
 
 
 
@@ -11,11 +9,10 @@ export default function WhatsAppButton({message}) {
   const searchParams = useSearchParams();
   const kwParam = searchParams.get('kw');
   const whatsappMessage = kwParam 
-    ? `${message || 'Hello, I would like to inquire about your luxury chalets.'} (Source: ${kwParam})`
+    ? `${message || 'Hello, I would like to inquire about your luxury chalets.'} (Search: ${kwParam})`
     : message || 'Hello, I would like to inquire about your luxury chalets.';
   return (<div className="fixed bottom-8 right-4 z-40 flex flex-col items-end gap-2"
       >
-        {/* Benefits popup */}
 
 
         {/* WhatsApp button */}
