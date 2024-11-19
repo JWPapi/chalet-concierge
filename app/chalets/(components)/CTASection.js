@@ -1,9 +1,17 @@
+'use client';
+
 import {BenefitsPopup} from './BenefitsPopup';
 import { Playfair_Display } from 'next/font/google';
+import { useSearchParams } from 'next/navigation';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 
 export default function CTASection({ location }) {
+  const searchParams = useSearchParams();
+  const kwParam = searchParams.get('kw');
+  const whatsappMessage = kwParam 
+    ? `Hello, I would like to inquire about your luxury chalets. (Source: ${kwParam})`
+    : 'Hello, I would like to inquire about your luxury chalets.';
   return (
     <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
       <div className="max-w-4xl mx-auto">
@@ -15,7 +23,7 @@ export default function CTASection({ location }) {
             Send your dates via WhatsApp, receive tailored recommendations, and secure your perfect chalet in {location} with our concierge support.
           </p>
           <a
-            href={`https://wa.me/4407849966208?text=Hello, I would like to inquire about your luxury chalets.`}
+            href={`https://wa.me/4407849966208?text=${encodeURIComponent(whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg text-lg font-semibold
